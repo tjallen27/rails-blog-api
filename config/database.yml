@@ -23,13 +23,13 @@ default: &default
 
 development:
   <<: *default
-  database: rails-blog-api_development
+  database: blog-api_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: rails-blog-api
+  #username: blog-api
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: rails-blog-api_test
+  database: blog-api_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: rails-blog-api_production
-  username: rails-blog-api
-  password: <%= ENV['RAILS-BLOG-API_DATABASE_PASSWORD'] %>
+  database: blog-api_production
+  username: blog-api
+  password: <%= ENV['BLOG-API_DATABASE_PASSWORD'] %>
